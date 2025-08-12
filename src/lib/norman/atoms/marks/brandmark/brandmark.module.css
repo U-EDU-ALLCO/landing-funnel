@@ -1,0 +1,11 @@
+.brandmark {
+	cursor: pointer;
+	/* background-color: rgb(0, 0, 0); */
+	width: max-content;
+	overflow: hidden;
+}
+
+.logo {
+	/* background-color: aquamarine; */
+	height: -webkit-fill-available;
+}

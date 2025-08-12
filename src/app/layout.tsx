@@ -4,26 +4,24 @@ import './globals.css'
 
 import GlobalSettings from '../config/settings/global.settings.json'
 
+import { Layer } from '@/lib/norman/engine'
+
 import {
 	HeadBar,
 	TailBar,
-	SlickBar,
-	CtxBar,
 	InfoBar,
 	ToggleBar,
 	ShortcutBar,
-	ShoutBar,
-	StatusBar,
-} from '@/lib/ux/patterns/bars'
+} from '@/lib/norman/patterns/bars'
 
 const prime = Plus_Jakarta_Sans({
-	variable: '--font-prime',
+	variable: '--writer-prime',
 	subsets: ['latin'],
 	weight: '500',
 })
 
 const sec = Plus_Jakarta_Sans({
-	variable: '--font-sec',
+	variable: '--writer-aux',
 	subsets: ['latin'],
 	weight: '500',
 })
@@ -38,19 +36,29 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode
 }>) {
+	const Head = (
+		<>
+			{/* <ShortcutBar /> */}
+			{/* <CtxBar /> */}
+			<HeadBar />
+			{/* <StatusBar /> */}
+		</>
+	)
+	const Tail = (
+		<>
+			<ShortcutBar />
+			<TailBar copyright="© 2025 iG5 Foundation | All Rights Reserved" />
+			<ToggleBar />
+			<InfoBar content="Copyright © All Rights Reserved | The Madras Wallstreet Growth Consulting ® TMWGC | Incorporated as Dewallstreet Private Limited" />
+		</>
+	)
+
 	return (
 		<html lang="en">
 			<body className={`${prime.variable} ${sec.variable}`}>
-				{/* <ShortcutBar />
-				<CtxBar /> */}
-				<HeadBar />
-				<SlickBar />
-				{/* <StatusBar /> */}
-				{children}
-				<ShortcutBar />
-				<TailBar copyright="© 2025 iG5 Foundation | All Rights Reserved" />
-				<ToggleBar />
-				<InfoBar content="Copyright © All Rights Reserved | The Madras Wallstreet Growth Consulting ® TMWGC | Incorporated as Dewallstreet Private Limited" />
+				<Layer.Head>{Head}</Layer.Head>
+				<Layer.Wrap>{children}</Layer.Wrap>
+				<Layer.Tail>{Tail}</Layer.Tail>
 			</body>
 		</html>
 	)

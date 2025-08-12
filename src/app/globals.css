@@ -1,5 +1,11 @@
+:root {
+	--success: #1eff69;
+	--warn: #decb00;
+	--error: #de1c1c;
+}
+
 * {
-	font-family: var(--font-prime), var(--font-sec), sans-serif;
+	font-family: var(--writer-prime), var(--writer-aux), sans-serif;
 	margin: 0;
 	overflow-x: hidden;
 	padding: 0;

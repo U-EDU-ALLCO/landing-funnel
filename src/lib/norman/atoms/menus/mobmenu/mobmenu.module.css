@@ -1,0 +1,20 @@
+.mobmenu {
+	display: none;
+}
+
+.mobmenu > a:hover {
+	font-size: 15px;
+	color: rgb(0, 26, 255);
+}
+
+@media only screen and (max-width: 600px) {
+	.mobmenu {
+		display: flex;
+		gap: 25px;
+		/* background-color: pink; */
+		align-self: center;
+		justify-self: center;
+		justify-content: center;
+		align-items: center;
+	}
+}

@@ -1,0 +1,21 @@
+.slickbar {
+	display: none;
+}
+
+@media only screen and (max-width: 600px) {
+	.slickbar {
+		display: grid;
+		grid-auto-flow: column;
+		border-bottom: 1.8px solid rgb(240, 240, 240);
+		padding: 8px 12px;
+		position: fixed;
+		margin-top: 8vh;
+		right: 0;
+		left: 0;
+		top: 0;
+		background-color: white;
+		height: 3vh;
+		align-content: center;
+		justify-content: space-between;
+	}
+}

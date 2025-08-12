@@ -1,14 +1,16 @@
-import Hero from '@/lib/ux/patterns/hero/hero'
+import Hero from '@/lib/norman/patterns/hero/hero'
+import { Writer } from '@/lib/norman/engine'
 
 const Home = () => {
 	return (
 		<main>
 			{
 				<Hero>
-					<h1>
+					<Writer.Chalk success mass={1}>
 						International Standards for Liberal & Responsible U-EDU
 						Academic Centres.
-					</h1>
+					</Writer.Chalk>
+					<Writer.Pen ink="orange">Hello</Writer.Pen>
 				</Hero>
 			}
 		</main>

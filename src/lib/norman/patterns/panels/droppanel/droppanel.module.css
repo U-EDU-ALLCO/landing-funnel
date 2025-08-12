@@ -1,0 +1,15 @@
+.droppanel {
+	background-color: blue;
+	border-top: 0.5px solid rgb(213, 213, 213);
+	position: relative;
+	justify-self: flex-start;
+	margin-top: 8vh;
+}
+
+@media only screen and (max-width: 600px) {
+	.droppanel {
+		background-color: pink;
+		position: relative;
+		margin-top: 13vh;
+	}
+}
