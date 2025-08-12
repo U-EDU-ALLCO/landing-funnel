@@ -1,0 +1,20 @@
+{
+	"menu": [
+		{
+			"name": "Education",
+			"href": "/ecosystem"
+		},
+		{
+			"name": "Standards",
+			"href": "/ecosystem"
+		},
+		{
+			"name": "Affiliations",
+			"href": "/foundation"
+		},
+		{
+			"name": "Resources",
+			"href": "/resources"
+		}
+	]
+}

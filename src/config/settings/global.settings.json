@@ -1,0 +1,33 @@
+{
+	"title": "🌍 U-EDU | Global Education Alliance ",
+	"description": "Uniting mentors, learners, NGOs & communities for ethical, inclusive, and freedom-driven education worldwide 🌍📚",
+	"keywords": [
+		"U-EDU",
+		"Unschool Education",
+		"Global Education Alliance",
+		"Curiosity-led Learning",
+		"Lifelong Learning Standards",
+		"Academic Freedom Education",
+		"International Education Standards",
+		"Ethical Education Framework",
+		"Alternative Education Models",
+		"Open Education Ecosystem",
+		"Learner-centered Governance",
+		"Project-based Learning Global",
+		"Educational Innovation Network"
+	],
+	"author": "Mallco Foundation",
+	"url": "https://ig5.network",
+	"image": "https://ig5.network/assets/social-banner.png",
+	"twitter_card": "summary_large_image",
+	"theme_color": "#121212",
+	"og": {
+		"title": "🌍 U-EDU | Global Alliance for Curiosity-Led Learning",
+		"description": "The U-EDU International Charter sets global standards for curiosity-led, ethical, and inclusive lifelong learning. Join a worldwide alliance reimagining education.",
+		"url": "https://u-edu.co",
+		"image": "https://u-edu.co/assets/images/og-image.jpg",
+		"type": "website",
+		"site_name": "U-EDU",
+		"locale": "en_US"
+	}
+}

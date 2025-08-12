@@ -1,0 +1,13 @@
+.slickbar {
+	display: none;
+}
+
+@media only screen and (max-width: 600px) {
+	.slickbar {
+		display: flex;
+		background-color: rgb(255, 255, 255);
+		border-bottom: 1.8px solid rgb(240, 240, 240);
+		padding: 12px 16px;
+		justify-content: space-between;
+	}
+}
