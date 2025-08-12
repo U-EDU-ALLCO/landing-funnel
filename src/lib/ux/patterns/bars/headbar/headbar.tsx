@@ -14,7 +14,7 @@ const HeadBar = () => {
 			<BrandMark />
 			<DropMenu style={{}} menu={HeadbarSettings.menu} />
 			<div className={styles.ctrls}>
-				<HookTrigger label="Become Partner" />
+				<HookTrigger label="Partners" />
 				<LabelGlyph {...HeadbarSettings.labelGlyph} />
 			</div>
 		</div>
