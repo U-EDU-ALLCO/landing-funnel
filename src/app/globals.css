@@ -45,7 +45,8 @@ main {
 }
 
 main h1 {
-	color: white;
+	color: rgb(8, 8, 8);
+	text-align: center;
 }
 
 @media only screen and (max-width: 600px) {
