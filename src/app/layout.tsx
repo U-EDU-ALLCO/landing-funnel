@@ -4,15 +4,7 @@ import './globals.css'
 
 import GlobalSettings from '../config/settings/global.settings.json'
 
-import { Layer } from '@/lib/norman/engine'
-
-import {
-	HeadBar,
-	TailBar,
-	InfoBar,
-	ToggleBar,
-	ShortcutBar,
-} from '@/lib/norman/patterns/bars'
+import App from './app'
 
 const prime = Plus_Jakarta_Sans({
 	variable: '--writer-prime',
@@ -36,29 +28,10 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode
 }>) {
-	const Head = (
-		<>
-			{/* <ShortcutBar /> */}
-			{/* <CtxBar /> */}
-			<HeadBar />
-			{/* <StatusBar /> */}
-		</>
-	)
-	const Tail = (
-		<>
-			<ShortcutBar />
-			<TailBar copyright="© 2025 iG5 Foundation | All Rights Reserved" />
-			<ToggleBar />
-			<InfoBar content="Copyright © All Rights Reserved | The Madras Wallstreet Growth Consulting ® TMWGC | Incorporated as Dewallstreet Private Limited" />
-		</>
-	)
-
 	return (
 		<html lang="en">
 			<body className={`${prime.variable} ${sec.variable}`}>
-				<Layer.Head>{Head}</Layer.Head>
-				<Layer.Wrap>{children}</Layer.Wrap>
-				<Layer.Tail>{Tail}</Layer.Tail>
+				<App>{children}</App>
 			</body>
 		</html>
 	)

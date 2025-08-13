@@ -1,6 +1,8 @@
 import React from 'react'
 import styles from './button.module.css'
 
+import { BeatLoader } from 'react-spinners'
+
 type ButtonProps = {
 	children: string
 	color?: string
@@ -12,6 +14,9 @@ type ButtonProps = {
 	aux?: boolean
 	glyph?: boolean
 	unfill?: boolean
+	loads?: boolean
+	onPress?: () => void
+	onLoadLabel?: string
 }
 
 const Button = ({
@@ -22,12 +27,15 @@ const Button = ({
 	warn,
 	prime,
 	aux,
-	glyph,
 	unfill,
+	loads,
+	onPress,
+	onLoadLabel,
 }: ButtonProps) => {
 	const createButton = React.createElement(
 		`${'button'}`,
 		{
+			onClick: onPress,
 			style:
 				(style && style) ||
 				(prime && { backgroundColor: 'blue', color: 'white' }) ||
@@ -40,7 +48,10 @@ const Button = ({
 				(success && styles.success) ||
 				(warn && styles.warn),
 		},
-		children
+		<>
+			{loads && <BeatLoader />}
+			{(loads && onLoadLabel) || children}
+		</>
 	)
 	return createButton
 }

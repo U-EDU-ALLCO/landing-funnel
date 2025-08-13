@@ -15,6 +15,11 @@ import { Wrap } from '@/lib/norman/engine'
 
 const HeadBar = () => {
 	const [isDropPanelOn, setDropPanelOn] = useState<boolean>(false)
+	const [loads, setLoads] = useState<boolean>(false)
+
+	const PartnerPressHandler = () => {
+		setLoads(!loads)
+	}
 
 	return (
 		<div className={styles.head}>
@@ -26,7 +31,13 @@ const HeadBar = () => {
 					menu={HeadbarSettings.menu}
 				/>
 				<div className={styles.ctrls}>
-					<Trigger.Button unfill>Partner</Trigger.Button>
+					<Trigger.Button
+						loads={loads}
+						onLoadLabel="Processing"
+						onPress={PartnerPressHandler}
+						unfill>
+						Partner
+					</Trigger.Button>
 					<LabelGlyph {...HeadbarSettings.labelGlyph} />
 				</div>
 			</div>
