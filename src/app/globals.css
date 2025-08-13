@@ -17,10 +17,19 @@ body {
 	background-color: rgb(255, 255, 255);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 2.5rem;
+}
+
 button {
 	align-self: center;
 	justify-self: center;
-	padding: 10px 18px;
+	padding: 8px 32px;
 	cursor: pointer;
 	outline: none;
 	border: none;
@@ -47,7 +56,7 @@ b {
 }
 
 main {
-	height: 1900px;
+	/* height: 1900px; */
 }
 
 main h1 {

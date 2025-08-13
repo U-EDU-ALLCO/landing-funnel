@@ -1,8 +1,8 @@
 import Image from 'next/image'
-import styles from './brandmark.module.css'
+import styles from './brand.module.css'
 import Link from 'next/link'
 
-const BrandMark = () => {
+const Brand = () => {
 	return (
 		<Link className={styles.brandmark} href={'/'}>
 			<Image
@@ -16,4 +16,4 @@ const BrandMark = () => {
 	)
 }
 
-export default BrandMark
+export default Brand

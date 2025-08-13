@@ -1,16 +1,16 @@
 import Hero from '@/lib/norman/patterns/hero/hero'
 import { Writer } from '@/lib/norman/engine'
 
+import API from '@/config'
+
 const Home = () => {
+	const { hero_contents } = API.CONTENTS
 	return (
 		<main>
 			{
 				<Hero>
-					<Writer.Chalk success mass={1}>
-						International Standards for Liberal & Responsible U-EDU
-						Academic Centres.
-					</Writer.Chalk>
-					<Writer.Pen ink="orange">Hello</Writer.Pen>
+					<Writer.Chalk mass={1}>{hero_contents.core}</Writer.Chalk>
+					<Writer.Pen>{hero_contents.brief}</Writer.Pen>
 				</Hero>
 			}
 		</main>

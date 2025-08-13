@@ -2,7 +2,6 @@
 
 import styles from './headbar.module.css'
 import { LabelGlyph } from '@/lib/norman/atoms/glyphs'
-import { BrandMark } from '@/lib/norman/atoms/marks'
 import { DropMenu } from '@/lib/norman/atoms/menus'
 import { Trigger } from '@/lib/norman/engine'
 import { HeadbarSettings } from '@/config/settings'
@@ -12,20 +11,22 @@ import { DropPanel } from '../../panels'
 
 import { SlickBar } from '@/lib/norman/patterns/bars'
 
+import { Wrap } from '@/lib/norman/engine'
+
 const HeadBar = () => {
 	const [isDropPanelOn, setDropPanelOn] = useState<boolean>(false)
 
 	return (
 		<div className={styles.head}>
 			<div className={styles.headbar}>
-				<BrandMark />
+				<Wrap.Brand />
 				<DropMenu
 					isDropPanelOn={isDropPanelOn}
 					setDropPanelOn={setDropPanelOn}
 					menu={HeadbarSettings.menu}
 				/>
 				<div className={styles.ctrls}>
-					<Trigger.Button aux>Partner</Trigger.Button>
+					<Trigger.Button unfill>Partner</Trigger.Button>
 					<LabelGlyph {...HeadbarSettings.labelGlyph} />
 				</div>
 			</div>

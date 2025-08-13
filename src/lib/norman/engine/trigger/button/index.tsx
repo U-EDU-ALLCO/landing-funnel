@@ -10,6 +10,8 @@ type ButtonProps = {
 	err?: boolean
 	prime?: boolean
 	aux?: boolean
+	glyph?: boolean
+	unfill?: boolean
 }
 
 const Button = ({
@@ -20,6 +22,8 @@ const Button = ({
 	warn,
 	prime,
 	aux,
+	glyph,
+	unfill,
 }: ButtonProps) => {
 	const createButton = React.createElement(
 		`${'button'}`,
@@ -27,7 +31,10 @@ const Button = ({
 			style:
 				(style && style) ||
 				(prime && { backgroundColor: 'blue', color: 'white' }) ||
-				(aux && { backgroundColor: 'black', color: 'white' }),
+				(aux && { backgroundColor: 'black', color: 'white' }) ||
+				(!aux &&
+					!prime &&
+					unfill && { backgroundColor: 'none', color: 'black' }),
 			className:
 				(err && styles.err) ||
 				(success && styles.success) ||
